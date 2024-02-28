@@ -1,3 +1,4 @@
+import Contact from './components/contact/Contact';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navigation/Navbar';
 import Projects from './components/projects/Projects';
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Work />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
