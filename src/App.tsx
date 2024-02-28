@@ -1,4 +1,5 @@
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 import Hero from './components/hero/Hero';
 import Navbar from './components/navigation/Navbar';
 import Projects from './components/projects/Projects';
@@ -16,6 +17,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
