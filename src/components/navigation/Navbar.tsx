@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
-import MobileNav from './MobileNav';
+import { MobileNav, DesktopNav } from './NavBars';
 
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(true);
 
   const handleNav = () => {
     setIsNavOpen((prevNav) => !prevNav);
@@ -17,6 +17,7 @@ const Navbar = () => {
         className="absolute top-4 right-4 z-[99] md:hidden"
       />
       {isNavOpen && <MobileNav />}
+      <DesktopNav />
     </nav>
   );
 };

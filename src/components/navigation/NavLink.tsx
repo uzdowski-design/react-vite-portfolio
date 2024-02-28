@@ -19,28 +19,28 @@ const ICONS = {
 };
 
 const NavLink = ({
-  icon,
-  title,
+  section,
+  title = '',
   size = undefined,
   className = ''
 }: {
-  icon: string;
-  title: string;
+  section: string;
+  title?: string;
   size?: string | number | undefined;
   className?: string;
 }) => {
-  const Icon: IconType = ICONS[icon as keyof typeof ICONS];
+  const Icon: IconType = ICONS[section as keyof typeof ICONS];
 
   return (
     <a
-      href="#main"
+      href={`#${section}`}
       className={cn(
-        'rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-105 ease-in duration-200',
+        'rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200',
         className
       )}
     >
       <Icon size={size} />
-      <span className="pl-4">{title}</span>
+      {title && <span className="pl-4">{title}</span>}
     </a>
   );
 };
