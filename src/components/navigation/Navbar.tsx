@@ -3,7 +3,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { MobileNav, DesktopNav } from './NavBars';
 
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleNav = () => {
     setIsNavOpen((prevNav) => !prevNav);
