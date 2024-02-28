@@ -21,7 +21,9 @@ const WorkItem = ({
           <span className="inline-block px-2 py-1 font-semibold text-white bg-[#001b5e] rounded-md">
             {date}
           </span>
-          <span className="text-lg font-semibold text-[#001b5e]">{title}</span>
+          <span className="text-lg font-semibold text-[#001b5e] min-w-[70%] sm:min-w-fit">
+            {title}
+          </span>
           <span className="text-lg  text-stone-700">{company}</span>
           <span className="my-1 text-sm font-normal leading-none text-stone-400">
             {duration}
