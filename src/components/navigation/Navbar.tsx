@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MobileNav, DesktopNav } from './NavBars';
+
+export const NavContext = createContext<{
+  isNavOpen: boolean;
+  setIsNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}>({
+  isNavOpen: false,
+  setIsNavOpen: () => {}
+});
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,10 +22,12 @@ const Navbar = () => {
       <AiOutlineMenu
         size={30}
         onClick={handleNav}
-        className="absolute top-4 right-4 z-[99] md:hidden"
+        className="fixed top-4 right-4 z-[99] md:hidden"
       />
-      {isNavOpen && <MobileNav />}
-      <DesktopNav />
+      <NavContext.Provider value={{ isNavOpen, setIsNavOpen }}>
+        {isNavOpen && <MobileNav />}
+        <DesktopNav />
+      </NavContext.Provider>
     </nav>
   );
 };

@@ -3,9 +3,9 @@ import Typewriting from './Typewriting';
 
 const Hero = () => {
   return (
-    <section>
+    <section id="home">
       <img
-        className="w-full h-screen object-cover object-center md:object-center scale-x-[-1]"
+        className="w-full h-screen object-cover object-center md:object-center scale-x-[-1] "
         src="/images/hero.jpg"
         alt="hero"
       />

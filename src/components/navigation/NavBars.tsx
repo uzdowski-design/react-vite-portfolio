@@ -3,7 +3,7 @@ import { menuItems } from '../../utils/constants';
 
 export const MobileNav = () => {
   return (
-    <div className="w-full h-screen md:hidden bg-white/90 flex flex-col justify-center items-center z-20">
+    <div className="w-full h-screen md:hidden bg-white/90 flex flex-col justify-center items-center z-20 fixed">
       {menuItems.map((item) => (
         <NavLink
           key={item}
