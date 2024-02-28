@@ -10,8 +10,8 @@ const Contact = () => {
         encType="multipart/form-data"
         onSubmit={(e) => {
           e.preventDefault();
-          e.currentTarget.submit();
-          e.currentTarget.reset();
+          // e.currentTarget.submit(); // commenting to prevent from submitting if no backend connected
+          // e.currentTarget.reset(); // commenting to prevent from submitting if no backend connected
         }}
       >
         <div className="grid md:grid-cols-2 gap-4 w-full py-2">
