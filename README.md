@@ -2,6 +2,8 @@
 
 Clean and aesthetic portfolio website mockup.
 
+🖥️ [Preview](https://clean-portfolio-website.netlify.app)
+
 ## Tech stack
 
 Created with _React_, _Vite_, _Typescript_ and _Tailwind_.
