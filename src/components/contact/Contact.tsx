@@ -8,6 +8,11 @@ const Contact = () => {
         action={import.meta.env.VITE_GETFORM_ENDPOINT}
         method="POST"
         encType="multipart/form-data"
+        onSubmit={(e) => {
+          e.preventDefault();
+          e.currentTarget.submit();
+          e.currentTarget.reset();
+        }}
       >
         <div className="grid md:grid-cols-2 gap-4 w-full py-2">
           <div className="flex flex-col">
