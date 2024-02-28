@@ -71,7 +71,7 @@ const Contact = () => {
             className="border-2 rounded-lg p-3 border-gray-300"
           />
         </div>
-        <button className="bg-[#001b5e] text-gray-100 rounded-lg mt-4 w-full p-4">
+        <button className="bg-[#001b5e] hover:bg-[#001b5e]/85 text-gray-100 rounded-lg mt-4 w-full p-4">
           Send Message
         </button>
       </form>
